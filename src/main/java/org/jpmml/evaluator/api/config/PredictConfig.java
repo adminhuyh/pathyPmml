@@ -17,6 +17,7 @@ import org.jpmml.evaluator.Evaluator;
 import org.jpmml.evaluator.FieldValue;
 import org.jpmml.evaluator.InputField;
 import org.jpmml.evaluator.ModelEvaluator;
+import org.jpmml.evaluator.ModelEvaluatorBuilder;
 import org.jpmml.evaluator.ModelEvaluatorFactory;
 import org.jpmml.evaluator.Predict;
 import org.jpmml.evaluator.ProbabilityDistribution;
@@ -54,8 +55,10 @@ public class PredictConfig {
 					long end = System.currentTimeMillis();
 					System.out.println((end-begin)/1000+"秒");
 					modelEvaluatorFactory = ModelEvaluatorFactory.newInstance();
-				    modelEvaluator = modelEvaluatorFactory.newModelEvaluator(pmml);
-				    evaluator = (Evaluator) modelEvaluator;
+				  //  modelEvaluator = modelEvaluatorFactory.newModelEvaluator(pmml);
+				  	ModelEvaluatorBuilder modelEvaluatorBuilder = new ModelEvaluatorBuilder(pmml);
+					evaluator = (Evaluator)modelEvaluatorBuilder.build();
+				    //evaluator = (Evaluator) modelEvaluator;
 				    inputFields = evaluator.getInputFields();
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -68,4 +71,9 @@ public class PredictConfig {
 		return  predict;
 		
 	}
+	/*
+	 * Evaluator evaluator = (Evaluator)modelEvaluatorBuilder.build();
+黄伟恩 17:11:32
+ModelEvaluatorBuilder modelEvaluatorBuilder = new ModelEvaluatorBuilder(pmml);
+	 */
 }
