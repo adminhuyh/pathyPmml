@@ -9,14 +9,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class PmmlService {
    	
-   @Autowired
-   public Predict initPredict;
+   /*@Autowired
+   public Predict initPredict;*/
    
    public void testPredict(Map lrHeartInputMap){
-		try {
+		/*try {
 			initPredict.predictLrHeart(lrHeartInputMap);
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}*/
    }
 }
