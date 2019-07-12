@@ -22,8 +22,8 @@ import org.jpmml.evaluator.TargetField;
 import org.jpmml.evaluator.Value;
 
 public class Predict {
-	Map lrHeartInputMap = new HashMap();
-	String path = "D:/workfile/python - copy/model.pmml";
+	
+	String path = "";
 	String  []  ss;
 	ModelEvaluatorFactory modelEvaluatorFactory;
 	ModelEvaluator<?> modelEvaluator;
