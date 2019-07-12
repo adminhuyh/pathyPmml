@@ -20,25 +20,25 @@ import net.sf.json.JSONObject;
 
 @CrossOrigin
 @RestController
-@RequestMapping(value="/pmml/predict")
+@RequestMapping(value="/test/predict")
 public class TestController {
 	
 	@Autowired
 	TestService testService;
 	
-	@RequestMapping("/test")
+	@RequestMapping("/test1")
 	public String test(){
 		return "ok";
 	}
 	
-	@RequestMapping("/test")
+	@RequestMapping("/test2")
 	public String testJson(HttpServletRequest request, HttpServletResponse responese){
 		
 		
 		return "ok";
 	}
 	
-	@RequestMapping("/test")
+	@RequestMapping("/test3")
 	public Map returnJson(HttpServletRequest request, HttpServletResponse responese){
 		Map map = new JSONObject();
 		map.put("success", "ok");

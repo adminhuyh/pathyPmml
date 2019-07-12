@@ -29,7 +29,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PredictConfig {
-/*	static  PMML pmml;	
+	static  PMML pmml;	
     static  String pmmlPath;
 	private static Properties prop;
 	static ModelEvaluatorFactory modelEvaluatorFactory;
@@ -67,5 +67,5 @@ public class PredictConfig {
 				evaluator,inputFields);		
 		return  predict;
 		
-	}*/
+	}
 }
